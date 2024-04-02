@@ -1,0 +1,129 @@
+/* Style for the calendar container */
+.rbc-calendar {
+  max-width: 100%;
+  height: 600px !important;
+  margin: 20px auto;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 19px 19px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  background: rgb(241, 241, 241);
+}
+.rbc-date-cell {
+  background: transparent !important;
+  color: black;
+}
+.rbc-toolbar {
+  background: #4b0853;
+  color: white !important;
+  border-radius: 8px 8px 0 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+  font-size: 16px !important;
+  justify-content: space-evenly !important;
+  align-items: center;
+  margin: 0 !important;
+}
+
+.rbc-toolbar button {
+  background: transparent !important;
+  color: white !important;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  transition: background 0.3s ease, color 0.3s ease;
+  box-shadow: none !important;
+}
+
+.rbc-toolbar button:hover {
+  background: ghostwhite !important;
+  color: black !important;
+}
+
+/* Style for the active state of buttons in the calendar header */
+.rbc-toolbar button:active {
+  background: white !important;
+}
+.rbc-btn-group button {
+  color: white !important;
+  border: none !important;
+}
+.rbc-btn-group button:active {
+  color: white !important;
+  border: none !important;
+  background-color: white !important
+  ;
+}
+.rbc-active {
+  color: black !important;
+  border: none !important;
+  background-color: white !important;
+}
+
+/* Style for the calendar events */
+.rbc-event {
+  border: none !important;
+  border-radius: 5px !important;
+  color: #ffffff;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for calendar events */
+.rbc-event:hover {
+  opacity: 0.8 !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+/* Hover effect for date header */
+.rbc-date-cell:hover {
+  background: #e0e0e0;
+  color: darkblue !important;
+}
+
+/* Style for today's date */
+.rbc-today {
+  background: #f7e4fa !important;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+/* Style for the date labels */
+.rbc-header {
+  background: #4b0853;
+  color: #ffffff;
+  font-size: 18px;
+  border: none !important;
+}
+
+/* Style for the time slot labels */
+.rbc-time-view {
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Style for the agenda view */
+.rbc-agenda-view {
+  border: 1px solid #e0e0e0;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Style for the agenda event */
+.rbc-agenda-event {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px;
+}
+
+/* Hover effect for agenda events */
+.rbc-agenda-event:hover {
+  background: #f8f8f8;
+}
+.rbc-off-range-bg {
+  background: none !important;
+}
+.rbc-month-view {
+  border: none !important;
+}

@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import image from "../../../assets/contactUs.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { toast, ToastContainer } from "react-toastify";
 const ContactForm = () => {
@@ -134,7 +133,11 @@ const ContactForm = () => {
             </button>
           </form>
         </div>
-        <img className="w-98 rounded-lg shadow-md " src={image} alt="" />
+        <img
+          className="w-98 rounded-lg shadow-md "
+          src={`${import.meta.env.VITE_CLOUDINARY}contactUs_iz8flu`}
+          alt=""
+        />
       </section>
 
       <section className="bg-dark-blue py-16 text-center px-12">

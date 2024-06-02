@@ -4,9 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Modal from "react-modal";
 import "react-datepicker/dist/react-datepicker.css";
-import Track from "../../../assets/userHome/Track.webp";
-import Schedule from "../../../assets/userHome/Scedule.jpg";
-import ClassWork from "../../../assets/userHome/ClassWork.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { UserContext } from "../../../context/UserContext";
@@ -32,10 +29,18 @@ function UserHome() {
     <div className="flex flex-col min-h-screen w-screen md:mb-4 md:pt-2">
       <div className="grid md:grid-cols-3 grid-row-1 w-screen h-screen">
         {[
-          { style: Schedule, title: "Schedule a Workout", color: `white` },
-          { style: Track, title: "Track Your Progress", color: `red-600` },
           {
-            style: ClassWork,
+            style: `${import.meta.env.VITE_CLOUDINARY}Scedule_njtazz`,
+            title: "Schedule a Workout",
+            color: `white`,
+          },
+          {
+            style: `${import.meta.env.VITE_CLOUDINARY}Track_o0b2ik`,
+            title: "Track Your Progress",
+            color: `red-600`,
+          },
+          {
+            style: `${import.meta.env.VITE_CLOUDINARY}ClassWork_d4imkm`,
             title: "Join Group Classes",
             color: `orange-500`,
           },

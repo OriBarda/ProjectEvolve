@@ -274,7 +274,7 @@ function Profile({ handleCloseModal }) {
             </div>
           </motion.div>
         ) : (
-          <div className="text-black text-lg">
+          <div className="text-black text-lg w-screen h-screen flex items-center justify-center">
             You're not logged in-
             <Link
               to={"/signup"}

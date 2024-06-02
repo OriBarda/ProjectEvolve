@@ -3,8 +3,6 @@ import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { LocalContext } from "../../../context/LocalContext";
 import { UserContext } from "../../../context/UserContext";
-import SmallLogo from "../../../assets/SmallLogo.png";
-import NavLogo from "../../../assets/EvolveText.png";
 import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { BiMenuAltRight } from "react-icons/bi";
 import { IoHomeSharp } from "react-icons/io5";
@@ -113,11 +111,19 @@ const Navbar = () => {
       >
         {userInfo ? (
           <Link className="text-3xl font-bold leading-none" to={"/member"}>
-            <img className="relative w-36" src={NavLogo} alt="" />
+            <img
+              className="relative w-36"
+              src={`${import.meta.env.VITE_CLOUDINARY}EvolveText_gh6rf0`}
+              alt=""
+            />
           </Link>
         ) : (
           <Link className="text-3xl font-bold leading-none" to={"/"}>
-            <img className="relative w-36" src={NavLogo} alt="" />
+            <img
+              className="relative w-36"
+              src={`${import.meta.env.VITE_CLOUDINARY}EvolveText_gh6rf0`}
+              alt=""
+            />
           </Link>
         )}
         <div className="lg:hidden">
@@ -308,11 +314,19 @@ const Navbar = () => {
                   className="text-3xl font-bold leading-none"
                   to={"/member"}
                 >
-                  <img className="relative w-12" src={SmallLogo} alt="" />
+                  <img
+                    className="relative w-12"
+                    src={`${import.meta.env.VITE_CLOUDINARY}SmallLogo_gm2xpd`}
+                    alt=""
+                  />
                 </Link>
               ) : (
                 <Link className="text-3xl font-bold leading-none" to={"/"}>
-                  <img className="relative w-12" src={SmallLogo} alt="" />
+                  <img
+                    className="relative w-12"
+                    src={`${import.meta.env.VITE_CLOUDINARY}SmallLogo_gm2xpd`}
+                    alt=""
+                  />
                 </Link>
               )}
               <ul className="h-96 flex flex-col justify-evenly w-full  ">

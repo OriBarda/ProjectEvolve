@@ -1,17 +1,5 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../../assets/SmallLogo.png";
-import Home from "../../../assets/home/homePage.jpg";
-import gymTrainer from "../../../assets/gym-trainer.webp";
-import gym from "../../../assets/gym2.jpg";
-import HweightTrainer from "../../../assets/boxer-trainer.webp";
-import Hweight from "../../../assets/HweightBg.jpg";
-import PilTrainer from "../../../assets/yoga-trainer.webp";
-import yoga from "../../../assets/yoga2.jpg";
-import swimTrainer from "../../../assets/swimmer-trainer.jpg";
-import swim from "../../../assets/swim1.jpg";
-import NutTrainer from "../../../assets/run-trainer.jpg";
-import run from "../../../assets/swim1.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "react-toastify/dist/ReactToastify.css";
@@ -20,7 +8,7 @@ function About() {
   const Trainers = [
     {
       id: 0,
-      image: gymTrainer,
+      image: `${import.meta.env.VITE_CLOUDINARY}gym-trainer_w03ldw`,
       name: "Brian John",
       specialty: "Strength Training and Conditioning",
       description:
@@ -28,7 +16,7 @@ function About() {
     },
     {
       id: 1,
-      image: HweightTrainer,
+      image: `${import.meta.env.VITE_CLOUDINARY}boxer-trainer_apb5bu`,
       name: "Alexis Torres",
       specialty: "Weight Lifting Workouts",
       description:
@@ -36,7 +24,7 @@ function About() {
     },
     {
       id: 2,
-      image: PilTrainer,
+      image: `${import.meta.env.VITE_CLOUDINARY}yoga-trainer_qhmbno`,
       name: "Isabella Cruz",
       specialty: "Pilates Instruction",
       description:
@@ -44,7 +32,7 @@ function About() {
     },
     {
       id: 3,
-      image: swimTrainer,
+      image: `${import.meta.env.VITE_CLOUDINARY}swimmer-trainer_zqs4d7`,
       name: "Nathan Rodriguez",
       specialty: "Swimming Techniques",
       description:
@@ -52,7 +40,7 @@ function About() {
     },
     {
       id: 4,
-      image: NutTrainer,
+      image: `${import.meta.env.VITE_CLOUDINARY}run-trainer_th7bkj`,
       name: "Olivia Miller",
       specialty: "Nutriton Programs",
       description:
@@ -222,35 +210,40 @@ function About() {
   ];
   const workoutOptions = [
     {
-      imageSrc: gym,
+      imageSrc: `${import.meta.env.VITE_CLOUDINARY}gym2_we9k7d
+      `,
       title: "Gym Facility",
       subtitle: "Strength and Conditioning",
       description:
         "Get stronger and improve your overall fitness with our state-of-the-art gym facilities. Our experienced trainers will guide you through personalized strength and conditioning programs tailored to your fitness goals.",
     },
     {
-      imageSrc: Hweight,
+      imageSrc: `${import.meta.env.VITE_CLOUDINARY}HweightBg_qqf2fo
+      `,
       title: "Weight Lifting Arena",
       subtitle: "Heavy Weight Lifting",
       description:
         "Challenge yourself with our intense weight lifting arena. Enhance your cardio endurance and agility with dynamic workouts. Learn essential weight lifting techniques under the guidance of our expert trainers, achieving a full-body workout.",
     },
     {
-      imageSrc: yoga,
+      imageSrc: `${import.meta.env.VITE_CLOUDINARY}yoga2_hznb53
+      `,
       title: "Pilates Room",
       subtitle: "Mindful Stretching",
       description:
         "Immerse yourself in mindfulness with our dedicated Pilates room. Experience gentle stretching, balance exercises, and relaxation techniques. Our Pilates classes promote overall well-being and stress relief.",
     },
     {
-      imageSrc: swim,
+      imageSrc: `${import.meta.env.VITE_CLOUDINARY}swim1_v53j6j
+      `,
       title: "Swimming Pools",
       subtitle: "Aquatic Fitness",
       description:
         "Dive into fitness with our swimming pools. Enjoy low-impact exercises in the water, improving cardiovascular health and toning muscles. Our aquatic fitness programs cater to all skill levels, providing a refreshing and effective workout.",
     },
     {
-      imageSrc: run,
+      imageSrc: `${import.meta.env.VITE_CLOUDINARY}cld-sample-4
+      `,
       title: "Nutrition Counselors",
       subtitle: "Dietary Guidance",
       description:
@@ -333,7 +326,7 @@ function About() {
             <img
               className="w-full bg-gray-50 rounded"
               alt="No alt"
-              src={Home}
+              src={`${import.meta.env.VITE_CLOUDINARY}homePage_vopryd`}
             />
           </motion.div>
 
@@ -377,7 +370,11 @@ function About() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
             className="col-span-2 order-2 sm:col-span-1 sm:order-none flex justify-center"
           >
-            <img className="w-64 bg-gray-50" alt="No alt" src={Logo} />
+            <img
+              className="w-64 bg-gray-50"
+              alt="No alt"
+              src={`${import.meta.env.VITE_CLOUDINARY}SmallLogo_gm2xpd`}
+            />
           </motion.div>
         </div>
       </div>

@@ -1,8 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../context/UserContext";
 import { LocalContext } from "../../context/LocalContext";
-import SignUpImg from "../../assets/HomePageGraphic.png";
-import LogInImg from "../../assets/BenefitsPageGraphic.png";
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -48,14 +46,13 @@ function SignUp() {
   const handleSignUp = async (e) => {
     e.preventDefault();
     try {
-      await setCreadtedUser(signUp); 
+      await setCreadtedUser(signUp);
       navigate("/payment");
       toast.success("User created successfully");
     } catch (error) {
       console.error("Sign up failed", error);
     }
   };
-  
 
   const handleSignUpClick = () => {
     setIsSignUpMode(true);
@@ -255,7 +252,13 @@ function SignUp() {
                 Sign up
               </button>
             </div>
-            <img src={LogInImg} className="overflow-hidden image" alt="" />
+            <img
+              src={`${
+                import.meta.env.VITE_CLOUDINARY
+              }BenefitsPageGraphic_s2kghl`}
+              className="overflow-hidden image"
+              alt=""
+            />
           </div>
           <div className="overflow-hidden panel right-panel">
             <div className="overflow-hidden content">
@@ -272,7 +275,12 @@ function SignUp() {
                 Sign In
               </button>
             </div>
-            <img src={SignUpImg} className="overflow-hidden image" alt="" />
+            <img
+              src={`${import.meta.env.VITE_CLOUDINARY}HomePageGraphic_hq88yw
+`}
+              className="overflow-hidden image"
+              alt=""
+            />
           </div>
         </div>
         {/* transitions end */}

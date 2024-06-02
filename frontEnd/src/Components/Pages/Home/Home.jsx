@@ -3,21 +3,6 @@ import { LocalContext } from "../../../context/LocalContext";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Plans from "../../Tools/Plans";
-import Background from "../../../assets/home/homePage.jpg";
-import FitnessAppImage from "../../../assets/home/ContactUsPageGraphic.png";
-import Report from "../../../assets/home/report.png";
-import Women from "../../../assets/home/women.png";
-import Muscle from "../../../assets/home/muscle.png";
-import Dumbbell from "../../../assets/home/dumbbell.png";
-import Training from "../../../assets/home/abo.png";
-import Apart1 from "../../../assets/home/apart1.png";
-import Apart2 from "../../../assets/home/apart2.png";
-import Apart3 from "../../../assets/home/apart3.png";
-import Apart4 from "../../../assets/home/apart4.png";
-import Apart5 from "../../../assets/home/apart5.png";
-import Apart6 from "../../../assets/home/apart6.png";
-import Phone from "../../../assets/home/phone.png";
-import SmallLogo from "../../../assets/SmallLogo.png";
 import Reveal from "../../Tools/Reveal";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -34,51 +19,81 @@ function Home() {
       title: "Body Analysis",
       description:
         "Kickstart your fitness journey with a comprehensive health assessment. I utilize functional movement screenings and body composition analysis to accurately gauge your fitness level. This forms the foundation for a tailored approach to your well-being.",
-      icon: Women,
+      icon: `${import.meta.env.VITE_CLOUDINARY}women_j3jsns.jpg`,
     },
     {
       title: "Fitness Programs",
       description:
         "Elevate your fitness experience with customized workout routines. After assessing your fitness levels, I design programs tailored to your goals, time constraints, and budget. Let's embark on a journey where I encourage, motivate, and guide you to achieve your health and fitness aspirations.",
-      icon: Muscle,
+      icon: `${import.meta.env.VITE_CLOUDINARY}muscle_w545tq.jpg`,
     },
     {
       title: "Health and Nutrition",
       description:
         "Explore a holistic approach to well-being with personalized nutrition coaching. Together, we'll develop a sustainable meal plan that aligns with your lifestyle, creating habits that support and maximize your fitness goals. Let's revolutionize your nutritional habits.",
-      icon: Dumbbell,
+      icon: `${import.meta.env.VITE_CLOUDINARY}report_jbbilc.jpg`,
     },
     {
       title: "Flexibility",
       description:
         "Embrace flexibility in your fitness journey. Our programs are designed to adapt to your unique health and fitness goals. Let's work together to customize an exercise and meal plan that not only aligns with your short-term objectives but also sets the stage for long-term success.",
-      icon: Report,
+      icon: `${import.meta.env.VITE_CLOUDINARY}dumbbell_efovyo.jpg`,
     },
   ];
 
   const icons = [
     {
-      icon: <img src={Apart1} alt="Apart1" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart1_mn7jt0`}
+          alt="Apart1"
+        />
+      ),
       title: "Transformation Journeys",
     },
     {
-      icon: <img src={Apart2} alt="Apart2" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart2_qyoyfq`}
+          alt="Apart2"
+        />
+      ),
       title: "Body Sculpting Quests",
     },
     {
-      icon: <img src={Apart3} alt="Apart3" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart3_kckf8i`}
+          alt="Apart3"
+        />
+      ),
       title: "Cardio Adventures",
     },
     {
-      icon: <img src={Apart4} alt="Apart4" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart4_kuixug`}
+          alt="Apart4"
+        />
+      ),
       title: "Out Doors Training",
     },
     {
-      icon: <img src={Apart5} alt="Apart5" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart5_ql8kti`}
+          alt="Apart5"
+        />
+      ),
       title: "Companionship in Wellness",
     },
     {
-      icon: <img src={Apart6} alt="Apart6" />,
+      icon: (
+        <img
+          src={`${import.meta.env.VITE_CLOUDINARY}apart6_ujgptp`}
+          alt="Apart6"
+        />
+      ),
       title: "Nutritional Compass",
     },
   ];
@@ -118,7 +133,9 @@ function Home() {
       <div
         id="home"
         style={{
-          background: `url(${Background})`,
+          background: `url(${
+            import.meta.env.VITE_CLOUDINARY
+          }homePage_vopryd.jpg)`,
           backgroundSize: `cover`,
           backgroundRepeat: "no-repeat",
         }}
@@ -140,7 +157,7 @@ function Home() {
           >
             <img
               className="absolute z-50 w-40"
-              src={SmallLogo}
+              src={`${import.meta.env.VITE_CLOUDINARY}SmallLogo_gm2xpd`}
               alt="Small Logo"
             />
             <div className="relative">
@@ -297,7 +314,11 @@ function Home() {
         <div className="relative flex flex-col justify-center items-center text-white">
           <div className="relative">
             <Reveal>
-              <img className="mb-4 w-full" src={Training} alt="Training" />
+              <img
+                className="mb-4 w-full"
+                src={`${import.meta.env.VITE_CLOUDINARY}abo_blgvw2`}
+                alt="Training"
+              />
             </Reveal>
             <ul className="grid sm:grid-cols-3 sm:grid-rows-2 xs:grid-cols-2 xs:grid-rows-3">
               {icons.map((icon, index) => (
@@ -393,7 +414,10 @@ function Home() {
               </p>
             </Reveal>
             <Reveal>
-              <img src={Phone} alt="" />
+              <img
+                src={`${import.meta.env.VITE_CLOUDINARY}phone_tsgajc`}
+                alt=""
+              />
             </Reveal>
           </div>
         ) : null}
@@ -440,7 +464,9 @@ function Home() {
         <div className="lg:w-1/2 mt-8 lg:mt-0 flex flex-col items-center">
           <Reveal>
             <img
-              src={FitnessAppImage}
+              src={`${
+                import.meta.env.VITE_CLOUDINARY
+              }ContactUsPageGraphic_b3ymwo`}
               alt="Fitness App"
               className="w-full max-w-md mx-auto rounded-md shadow-lg"
             />

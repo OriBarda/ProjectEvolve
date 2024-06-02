@@ -7,10 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import "react-toastify/dist/ReactToastify.css";
 import Modal from "react-modal";
 Modal.setAppElement("#root");
-import ModalBackground from "../../../assets/svg/WorkoutModalBackground.svg";
 import { IoIosClose, IoIosAdd } from "react-icons/io";
 import { LocalContext } from "../../../context/LocalContext";
-import { css } from "@emotion/react";
 import { ScaleLoader } from "react-spinners";
 
 const ProgressTracking = () => {

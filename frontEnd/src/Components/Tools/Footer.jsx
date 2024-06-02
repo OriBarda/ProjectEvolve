@@ -8,8 +8,6 @@ import {
   FaJs,
 } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
-import Image from "../../assets/EvolveText.png";
-import TW from "../../assets/tailwind-css.svg";
 
 function Footer() {
   const isWideScreen = useMediaQuery({ minWidth: 1069 });
@@ -64,7 +62,7 @@ function Footer() {
             </div>
             <div className="text-center p-2">
               <img
-                src={TW}
+                src={`${import.meta.env.VITE_CLOUDINARY}tailwind-css_wcx6ab`}
                 alt=""
                 className="w-12 h-12 mx-auto mb-2 text-orange-500"
               />
@@ -74,7 +72,11 @@ function Footer() {
             </div>
           </div>
           <div className="flex items-center">
-            <img src={Image} alt="Logo" className="h-8" />
+            <img
+              src={`${import.meta.env.VITE_CLOUDINARY}EvolveText_gh6rf0`}
+              alt="Logo"
+              className="h-8"
+            />
           </div>
         </div>
       ) : null}
